@@ -1,6 +1,7 @@
 package kr.co.springbootawswebservicestudy.persistence.entity;
 
 import jakarta.persistence.*;
+import kr.co.springbootawswebservicestudy.persistence.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 @Table(name = "tbl_post")
-public class Post {
+public class Post extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
