@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class FirstPageController {
+public class MainController {
 
     @GetMapping
-    public String firstPage(){
+    public String main(){
 
-        return "firstPage";
+        return "main";
     }
 }
