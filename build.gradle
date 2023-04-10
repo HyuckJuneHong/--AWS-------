@@ -38,6 +38,9 @@ dependencies {
 
     //db
     runtimeOnly 'com.h2database:h2'
+
+    //mustache
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mustache'
 }
 
 tasks.named('test') {
