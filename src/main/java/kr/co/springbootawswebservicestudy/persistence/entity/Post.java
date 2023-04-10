@@ -2,16 +2,13 @@ package kr.co.springbootawswebservicestudy.persistence.entity;
 
 import jakarta.persistence.*;
 import kr.co.springbootawswebservicestudy.persistence.BaseTimeEntity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Entity
 @Table(name = "tbl_post")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Post extends BaseTimeEntity {
 
     @Id
@@ -27,12 +24,18 @@ public class Post extends BaseTimeEntity {
     private String author;
 
     @Builder
-    public Post(String title,
+    private Post(String title,
                 String content,
                 String author) {
 
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void updatePost(String title, String content) {
+
+        this.title = title;
+        this.content = content;
     }
 }

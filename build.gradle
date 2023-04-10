@@ -39,6 +39,10 @@ dependencies {
     //db
     runtimeOnly 'com.h2database:h2'
 
+    //mapStruct
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
     //mustache
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mustache'
 }
